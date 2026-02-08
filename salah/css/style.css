@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #0a58ca;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --overlay-color: rgba(0, 0, 0, 0.6);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    background: rgba(33, 37, 41, 0.8);
+}
+
+.navbar.scrolled {
+    background: rgba(33, 37, 41, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+/* Hero Section */
+#hero {
+    background: url('https://source.unsplash.com/1920x1080/?university,campus,technology') no-repeat center center/cover;
+    margin-top: -76px;
+    /* To go behind navbar */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    background: linear-gradient(135deg, rgba(8, 14, 44, 0.9) 0%, rgba(13, 110, 253, 0.6) 100%);
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+/* Sections */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title {
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Statistics */
+#stats {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    overflow: hidden;
+}
+
+.custom-shape-divider-bottom-1680000000 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1680000000 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.custom-shape-divider-bottom-1680000000 .shape-fill {
+    fill: #f8f9fa;
+}
+
+/* Formations Cards */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+/* Testimonial Carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+    background-size: 60%;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Partners */
+.grayscale-logos i {
+    transition: all 0.3s ease;
+}
+
+.grayscale-logos i:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
